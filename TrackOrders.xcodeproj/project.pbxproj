@@ -212,12 +212,12 @@
 				3DF7A1D0214C2C0B00E5372A /* Extension */,
 				3DF7A1D7214C2C0C00E5372A /* Helper */,
 				3DF7A1D4214C2C0C00E5372A /* Models */,
+				3D69A5EA214EFF6D00A6C830 /* Scene */,
 				3DF7A1B0214C2AA200E5372A /* AppDelegate.swift */,
 				3DF7A1B4214C2AA200E5372A /* Main.storyboard */,
 				3DF7A1B7214C2AA400E5372A /* Assets.xcassets */,
 				3DF7A1B9214C2AA400E5372A /* LaunchScreen.storyboard */,
 				3DF7A1BC214C2AA400E5372A /* Info.plist */,
-				3D69A5EA214EFF6D00A6C830 /* Scene */,
 			);
 			path = TrackOrders;
 			sourceTree = "<group>";
