@@ -19,15 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         
-        Reachability.startNetworkReachabilityObserver()
-        
-        NetworkActivityIndicatorManager.shared.isEnabled = true
+
         
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = OrdersListBuilder.navigationController()
         
         self.window?.makeKeyAndVisible()
+        
+        Reachability.startNetworkReachabilityObserver()
+        
+        NetworkActivityIndicatorManager.shared.isEnabled = true
         
         return true
     }

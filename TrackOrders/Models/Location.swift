@@ -6,12 +6,13 @@
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
+import RealmSwift
 
-struct Location : Codable {
+class Location : Object,Codable {
 
-	let address : String?
-	let lat : Float?
-	let lng : Float?
+	@objc dynamic var address : String? = nil
+	@objc dynamic var lat : Float = 0.0
+	@objc dynamic var lng : Float = 0.0
 
 
 	enum CodingKeys: String, CodingKey {
@@ -19,12 +20,13 @@ struct Location : Codable {
 		case lat = "lat"
 		case lng = "lng"
 	}
-	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
+    convenience required init(from decoder: Decoder) throws  {
+        self.init()
+        let values = try decoder.container(keyedBy: CodingKeys.self)
 		address = try values.decodeIfPresent(String.self, forKey: .address)
-		lat = try values.decodeIfPresent(Float.self, forKey: .lat)
-		lng = try values.decodeIfPresent(Float.self, forKey: .lng)
+		lat = try values.decodeIfPresent(Float.self, forKey: .lat) ?? 0.0
+		lng = try values.decodeIfPresent(Float.self, forKey: .lng) ?? 0.0
 	}
-
+    
 
 }

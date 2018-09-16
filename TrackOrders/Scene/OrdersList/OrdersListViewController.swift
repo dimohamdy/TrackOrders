@@ -79,8 +79,6 @@ private extension OrdersListViewController {
             
             cell.configureCellWith(order: cellData, delegate: self)
             
-            cell.delegate = self as! OrdereCellAction
-            
             }.disposed(by: disposeBag)
         
         

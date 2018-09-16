@@ -6,13 +6,14 @@
 //	Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
 
 import Foundation
+import RealmSwift
 
-struct Order : Codable {
+class Order : Object,Codable {
 
-	let descriptionField : String?
-	let id : Int?
-	let imageUrl : String?
-	let location : Location?
+	@objc dynamic var descriptionField : String? = nil
+	@objc dynamic var id : Int = 0
+	@objc dynamic var imageUrl : String? = nil
+	@objc dynamic var location : Location? = nil
 
 
 	enum CodingKeys: String, CodingKey {
@@ -21,13 +22,21 @@ struct Order : Codable {
 		case imageUrl = "imageUrl"
 		case location
 	}
-	init(from decoder: Decoder) throws {
-		let values = try decoder.container(keyedBy: CodingKeys.self)
+    convenience required init(from decoder: Decoder) throws  {
+        self.init()
+        let values = try decoder.container(keyedBy: CodingKeys.self)
 		descriptionField = try values.decodeIfPresent(String.self, forKey: .descriptionField)
-		id = try values.decodeIfPresent(Int.self, forKey: .id)
+		id = try values.decodeIfPresent(Int.self, forKey: .id) ?? 0
 		imageUrl = try values.decodeIfPresent(String.self, forKey: .imageUrl)
         location = try values.decodeIfPresent(Location.self, forKey: .location)
 	}
+    
 
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 
+    public static func ==(lhs: Order, rhs: Order) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

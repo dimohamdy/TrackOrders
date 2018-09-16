@@ -16,7 +16,8 @@ target 'TrackOrders' do
   pod 'SimpleImageViewer', '~> 1.1.1'
   pod 'SwiftMessages'
   pod 'AlamofireNetworkActivityIndicator'
- pod 'SnapKit', '~> 4.0.0'
+  pod 'SnapKit', '~> 4.0.0'
+  pod 'RealmSwift'
 
 end
 

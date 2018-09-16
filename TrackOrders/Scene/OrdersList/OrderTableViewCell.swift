@@ -23,6 +23,9 @@ class OrderTableViewCell: UITableViewCell,ReusableCellView {
     }
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
+        self.selectionStyle = .none
+
         orderImage = UIImageView(image: #imageLiteral(resourceName: "lalamove"))
         descriptionLabel = UILabel()
         descriptionLabel.numberOfLines = 0

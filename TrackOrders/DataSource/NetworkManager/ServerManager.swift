@@ -8,9 +8,12 @@
 
 import Alamofire
 
-class ServerManager {
-    
-    static func getOrders(offset:Int,limit:Int,completion:@escaping ([Order]?) -> Void){
+class ServerManager : DataSource {
+    let database:DataBaseManager!
+    init(database:DataBaseManager) {
+        self.database = database
+    }
+    func getOrders(offset:Int,limit:Int,completion:@escaping ([Order]?) -> Void){
 
         Alamofire.request(API.deliveries.url,
                           method: .get,
@@ -22,13 +25,14 @@ class ServerManager {
 
                 do {
                     let decoder = JSONDecoder()
-                    let photos = try decoder.decode([Order].self, from: data)
-                    completion(photos)
-                    print(photos.count)
+                    let orders = try decoder.decode([Order].self, from: data)
+                    self.database.save(orders: orders)
+                    completion(orders)
+                    print(orders.count)
                     
                 } catch let err {
                     completion(nil)
-                    //print("Err", err)
+                    print("Err", err)
                 }
                 
         }

@@ -11,6 +11,7 @@ import Alamofire
 
 class Reachability {
     
+
     static let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com")
     
     static func startNetworkReachabilityObserver() {
@@ -32,5 +33,11 @@ class Reachability {
         
         // start listening
         reachabilityManager?.startListening()
+    }
+    
+    static var isConnected: Bool {
+        guard let reachabilityManager = Alamofire.NetworkReachabilityManager(host: "www.google.com") else { return false }
+        
+        return reachabilityManager.isReachable
     }
 }

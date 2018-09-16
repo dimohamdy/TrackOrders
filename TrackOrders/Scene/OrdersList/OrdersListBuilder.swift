@@ -11,7 +11,8 @@ import UIKit
 struct OrdersListBuilder {
 
     static func viewController() -> OrdersListViewController {
-        let viewModel = OrdersListViewModel()
+        let dataBaseManager = DataBaseManager()
+        let viewModel = OrdersListViewModel(database: dataBaseManager)
         let router = OrdersListRouter()
         let viewController = OrdersListViewController(withViewModel: viewModel, router: router)
         router.viewController = viewController

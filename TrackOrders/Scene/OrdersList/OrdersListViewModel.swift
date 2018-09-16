@@ -10,20 +10,23 @@ import RxSwift
 import RxCocoa
 
 class OrdersListViewModel : BaseViewModel {
-
+    
     // input
-
+    var database: DataBaseManager!
+    var serverManager:ServerManager!
     // output
     var ordersRX  : BehaviorRelay<[Order]> = BehaviorRelay(value: [])
-
+    
     // internal
     fileprivate var page = 0
     fileprivate var canLoadMore = true
     
     let limitOfItem = 10
     
-    override init() {
+    init(database: DataBaseManager) {
         super.init()
+        self.database = database
+        self.serverManager = ServerManager(database: database)
         setupRx()
         getOrders()
     }
@@ -36,7 +39,17 @@ class OrdersListViewModel : BaseViewModel {
     }
     func getOrders(){
         self.loading.accept(true)
-        ServerManager.getOrders(offset: page,limit: limitOfItem) { ordersArray in
+        
+        var datasource:DataSource? = nil
+        //check internet connection
+        if Reachability.isConnected  == true {
+            datasource = ServerManager(database: database)
+        } else {
+            datasource = database
+            
+        }
+        
+        datasource?.getOrders(offset: page,limit: limitOfItem) { ordersArray in
             // print(photos?.count)
             guard let orders = ordersArray else{
                 return
@@ -45,15 +58,17 @@ class OrdersListViewModel : BaseViewModel {
             var tempOrderArray = self.ordersRX.value
             tempOrderArray.append(contentsOf: orders)
             self.ordersRX.accept(tempOrderArray)
-
+            
         }
+        
     }
+    
 }
 
 // MARK: Setup
 private extension OrdersListViewModel {
-
+    
     func setupRx() {
-
+        
     }
 }
