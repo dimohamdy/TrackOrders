@@ -13,10 +13,10 @@ target 'TrackOrders' do
   rxswift_pods
   pod 'NVActivityIndicatorView'
   pod 'AlamofireImage'
-pod 'SimpleImageViewer', '~> 1.1.1'
-pod 'SwiftMessages'
-pod 'AlamofireNetworkActivityIndicator'
-pod 'SnapKit', '~> 4.0.0'
+  pod 'SimpleImageViewer', '~> 1.1.1'
+  pod 'SwiftMessages'
+  pod 'AlamofireNetworkActivityIndicator'
+ pod 'SnapKit', '~> 4.0.0'
 
 end
 

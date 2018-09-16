@@ -9,10 +9,13 @@
 import UIKit
 import SnapKit
 
+protocol OrdereCellAction : class {
+    func showOrderImage(imageView:UIImageView)
+}
 class OrderTableViewCell: UITableViewCell,ReusableCellView {
     private var orderImage: UIImageView!
     private var descriptionLabel: UILabel!
-
+    weak var delegate:OrdereCellAction!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,7 +23,7 @@ class OrderTableViewCell: UITableViewCell,ReusableCellView {
     }
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        orderImage = UIImageView(image: #imageLiteral(resourceName: "close"))
+        orderImage = UIImageView(image: #imageLiteral(resourceName: "lalamove"))
         descriptionLabel = UILabel()
         descriptionLabel.numberOfLines = 0
         self.addSubview(orderImage)
@@ -40,18 +43,22 @@ class OrderTableViewCell: UITableViewCell,ReusableCellView {
             make.bottom.equalTo(self).offset(8)
         }
 
+        let tapGestureRecognizerToShowOrderImage = UITapGestureRecognizer(target: self, action: #selector(showImageView(tapGestureRecognizer:)))
+        orderImage.isUserInteractionEnabled = true
+        orderImage.addGestureRecognizer(tapGestureRecognizerToShowOrderImage)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    func configureCellWith(order:Order) {
+    func configureCellWith(order:Order,delegate:OrdereCellAction) {
         descriptionLabel.text =  order.descriptionField
         
         guard let path = order.imageUrl  else {
             return
         }
         orderImage.setImageWith(path)
+        self.delegate = delegate
 
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -60,4 +67,10 @@ class OrderTableViewCell: UITableViewCell,ReusableCellView {
         // Configure the view for the selected state
     }
 
+    @objc func showImageView(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        // Your action
+        delegate.showOrderImage(imageView: tappedImage)
+    }
 }

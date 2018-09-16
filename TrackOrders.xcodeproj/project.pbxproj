@@ -14,6 +14,7 @@
 		3D1BABB2214D3AEB00D691DA /* OrderDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BABAE214D3AEB00D691DA /* OrderDetailsViewModel.swift */; };
 		3D1BABB4214D3C0500D691DA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1BABB3214D3C0500D691DA /* MapKit.framework */; };
 		3D69A5CB214E0DCD00A6C830 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D69A5CA214E0DCD00A6C830 /* Rechability.swift */; };
+		3D69A5CD214EA21F00A6C830 /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D69A5CC214EA21F00A6C830 /* ServerManager.swift */; };
 		3DF7A1B1214C2AA200E5372A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B0214C2AA200E5372A /* AppDelegate.swift */; };
 		3DF7A1B6214C2AA200E5372A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B4214C2AA200E5372A /* Main.storyboard */; };
 		3DF7A1B8214C2AA400E5372A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B7214C2AA400E5372A /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		3D1BABAE214D3AEB00D691DA /* OrderDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewModel.swift; sourceTree = "<group>"; };
 		3D1BABB3214D3C0500D691DA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3D69A5CA214E0DCD00A6C830 /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
+		3D69A5CC214EA21F00A6C830 /* ServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
 		3DF7A1AD214C2AA200E5372A /* TrackOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF7A1B0214C2AA200E5372A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DF7A1B5214C2AA200E5372A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF7A1C5214C2AA400E5372A /* TrackOrdersTests.swift */,
+				3D69A5CC214EA21F00A6C830 /* ServerManager.swift */,
 				3DF7A1C7214C2AA400E5372A /* Info.plist */,
 			);
 			path = TrackOrdersTests;
@@ -457,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D69A5CD214EA21F00A6C830 /* ServerManager.swift in Sources */,
 				3DF7A1C6214C2AA400E5372A /* TrackOrdersTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

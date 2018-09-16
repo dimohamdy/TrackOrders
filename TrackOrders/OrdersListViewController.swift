@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import SnapKit
+import SimpleImageViewer
 
 class OrdersListViewController: BaseViewController {
     fileprivate let viewModel: OrdersListViewModel
@@ -76,7 +77,9 @@ private extension OrdersListViewController {
         
         viewModel.ordersRX.asObservable().bind(to: tableView!.rx.items(cellIdentifier: OrderTableViewCell.id, cellType: OrderTableViewCell.self)) { row, cellData, cell in
             
-            cell.configureCellWith(order: cellData)
+            cell.configureCellWith(order: cellData, delegate: self)
+            
+            cell.delegate = self as! OrdereCellAction
             
             }.disposed(by: disposeBag)
         
@@ -109,5 +112,17 @@ extension OrdersListViewController: UITableViewDelegate {
     }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         viewModel.loadMoreData(indexPath)
+    }
+}
+
+extension OrdersListViewController : OrdereCellAction {
+    
+    func showOrderImage(imageView: UIImageView) {
+        let configuration = ImageViewerConfiguration { config in
+            config.imageView = imageView
+        }
+        
+        self.present(ImageViewerController(configuration: configuration), animated: true)
+        
     }
 }
