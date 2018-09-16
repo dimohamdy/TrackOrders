@@ -116,11 +116,7 @@ extension OrdersListViewController: UITableViewDelegate {
 extension OrdersListViewController : OrdereCellAction {
     
     func showOrderImage(imageView: UIImageView) {
-        let configuration = ImageViewerConfiguration { config in
-            config.imageView = imageView
-        }
-        
-        self.present(ImageViewerController(configuration: configuration), animated: true)
-        
+
+        self.showImage(imageView: imageView)
     }
 }

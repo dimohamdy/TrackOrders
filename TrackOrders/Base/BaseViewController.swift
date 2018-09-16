@@ -10,6 +10,7 @@ import UIKit
 import NVActivityIndicatorView
 import RxSwift
 import RxCocoa
+import SimpleImageViewer
 
 class BaseViewController: UIViewController {
     
@@ -57,7 +58,14 @@ class BaseViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
+    func showImage(imageView: UIImageView) {
+        let configuration = ImageViewerConfiguration { config in
+            config.imageView = imageView
+        }
+        
+        self.present(ImageViewerController(configuration: configuration), animated: true)
+        
+    }
 }
 extension NVActivityIndicatorView {
     public var rx_animating: AnyObserver<Bool> {

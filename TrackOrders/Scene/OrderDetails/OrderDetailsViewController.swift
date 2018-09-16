@@ -66,6 +66,10 @@ private extension OrderDetailsViewController {
             orderImage.setImageWith(path)
         }
         view.addSubview(orderImage)
+        let tapGestureRecognizerToShowOrderImage = UITapGestureRecognizer(target: self, action: #selector(showImageView(tapGestureRecognizer:)))
+        orderImage.isUserInteractionEnabled = true
+        orderImage.addGestureRecognizer(tapGestureRecognizerToShowOrderImage)
+        
         orderImage.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(mapView.snp.bottom).offset(20)
             make.left.equalTo(view).offset(20)
@@ -94,6 +98,15 @@ private extension OrderDetailsViewController {
         mapView.showAnnotations([loc], animated: true)
                 
     }
+    
+    @objc func showImageView(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        let tappedImage = tapGestureRecognizer.view as! UIImageView
+        // Your action
+        self.showImage(imageView: tappedImage)
+    }
+    
+
     
     func setupLayout() {
         
