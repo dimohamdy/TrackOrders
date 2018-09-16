@@ -1,0 +1,66 @@
+PODS:
+  - Alamofire (4.7.3)
+  - AlamofireImage (3.3.1):
+    - Alamofire (~> 4.5)
+  - AlamofireNetworkActivityIndicator (2.2.1):
+    - Alamofire (~> 4.7)
+  - ALCameraViewController (3.0.3)
+  - Nimble (7.2.0)
+  - NVActivityIndicatorView (4.3.0):
+    - NVActivityIndicatorView/Presenter (= 4.3.0)
+  - NVActivityIndicatorView/Presenter (4.3.0)
+  - Quick (1.3.1)
+  - RxCocoa (4.2.0):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.2.0)
+  - SimpleImageViewer (1.1.1)
+  - SnapKit (4.0.0)
+  - SwiftMessages (5.0.1):
+    - SwiftMessages/App (= 5.0.1)
+  - SwiftMessages/App (5.0.1)
+
+DEPENDENCIES:
+  - AlamofireImage
+  - AlamofireNetworkActivityIndicator
+  - ALCameraViewController
+  - Nimble
+  - NVActivityIndicatorView
+  - Quick
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+  - SimpleImageViewer (~> 1.1.1)
+  - SnapKit (~> 4.0.0)
+  - SwiftMessages
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - AlamofireImage
+    - AlamofireNetworkActivityIndicator
+    - ALCameraViewController
+    - Nimble
+    - NVActivityIndicatorView
+    - Quick
+    - RxCocoa
+    - RxSwift
+    - SimpleImageViewer
+    - SnapKit
+    - SwiftMessages
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
+  AlamofireNetworkActivityIndicator: aeac50e6ecb78ec71a5f1f29098bcf4ec2962910
+  ALCameraViewController: 6398a9282057f709b87a1ecc52a83b48028ade64
+  Nimble: fa2913b0e14dafef970357f67d152ab4f7c4f457
+  NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
+  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
+  RxCocoa: 0b54909c902e1e581212a03e690bbd94032d8baa
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SimpleImageViewer: 34c3a2cde2d9ac022146772cefc27fca14b0c8b1
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
+
+PODFILE CHECKSUM: cef3f75972b7ce12207e9a2edb281977eaef3ab0
+
+COCOAPODS: 1.5.2

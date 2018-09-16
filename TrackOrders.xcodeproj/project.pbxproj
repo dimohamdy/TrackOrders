@@ -7,12 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B3639745C6905D2754C3305 /* libPods-TrackOrdersTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AB1D19BB6DAC46761020E5A /* libPods-TrackOrdersTests.a */; };
+		3D1BABAF214D3AEB00D691DA /* OrderDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BABAB214D3AEB00D691DA /* OrderDetailsRouter.swift */; };
+		3D1BABB0214D3AEB00D691DA /* OrderDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BABAC214D3AEB00D691DA /* OrderDetailsViewController.swift */; };
+		3D1BABB1214D3AEB00D691DA /* OrderDetailsBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BABAD214D3AEB00D691DA /* OrderDetailsBuilder.swift */; };
+		3D1BABB2214D3AEB00D691DA /* OrderDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BABAE214D3AEB00D691DA /* OrderDetailsViewModel.swift */; };
+		3D1BABB4214D3C0500D691DA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D1BABB3214D3C0500D691DA /* MapKit.framework */; };
+		3D69A5CB214E0DCD00A6C830 /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D69A5CA214E0DCD00A6C830 /* Rechability.swift */; };
 		3DF7A1B1214C2AA200E5372A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B0214C2AA200E5372A /* AppDelegate.swift */; };
-		3DF7A1B3214C2AA200E5372A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B2214C2AA200E5372A /* ViewController.swift */; };
 		3DF7A1B6214C2AA200E5372A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B4214C2AA200E5372A /* Main.storyboard */; };
 		3DF7A1B8214C2AA400E5372A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B7214C2AA400E5372A /* Assets.xcassets */; };
 		3DF7A1BB214C2AA400E5372A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DF7A1B9214C2AA400E5372A /* LaunchScreen.storyboard */; };
 		3DF7A1C6214C2AA400E5372A /* TrackOrdersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1C5214C2AA400E5372A /* TrackOrdersTests.swift */; };
+		3DF7A1E6214C2C0F00E5372A /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1D1214C2C0B00E5372A /* UIImageViewExtension.swift */; };
+		3DF7A1E7214C2C0F00E5372A /* StoryboaedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1D2214C2C0B00E5372A /* StoryboaedExtension.swift */; };
+		3DF7A1E8214C2C0F00E5372A /* Cell+Identfier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1D3214C2C0B00E5372A /* Cell+Identfier.swift */; };
+		3DF7A1E9214C2C0F00E5372A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1D5214C2C0C00E5372A /* Location.swift */; };
+		3DF7A1EA214C2C0F00E5372A /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1D6214C2C0C00E5372A /* Order.swift */; };
+		3DF7A1EB214C2C0F00E5372A /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1D8214C2C0C00E5372A /* Banner.swift */; };
+		3DF7A1EC214C2C0F00E5372A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1DA214C2C0D00E5372A /* Constant.swift */; };
+		3DF7A1ED214C2C0F00E5372A /* ServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1DB214C2C0D00E5372A /* ServerManager.swift */; };
+		3DF7A1EE214C2C0F00E5372A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1DD214C2C0D00E5372A /* BaseViewController.swift */; };
+		3DF7A1EF214C2C0F00E5372A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1DE214C2C0D00E5372A /* BaseViewModel.swift */; };
+		3DF7A1F9214C2CD400E5372A /* OrdersListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1F5214C2CD400E5372A /* OrdersListRouter.swift */; };
+		3DF7A1FA214C2CD400E5372A /* OrdersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1F6214C2CD400E5372A /* OrdersListViewController.swift */; };
+		3DF7A1FB214C2CD400E5372A /* OrdersListBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1F7214C2CD400E5372A /* OrdersListBuilder.swift */; };
+		3DF7A1FC214C2CD400E5372A /* OrdersListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1F8214C2CD400E5372A /* OrdersListViewModel.swift */; };
+		3DF7A1FE214C2E2A00E5372A /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF7A1FD214C2E2A00E5372A /* OrderTableViewCell.swift */; };
+		A976BC6DC7BD67559C33DC60 /* Pods_TrackOrders.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AF7577905FF352D1DAF4592 /* Pods_TrackOrders.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,9 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3D1BABAB214D3AEB00D691DA /* OrderDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsRouter.swift; sourceTree = "<group>"; };
+		3D1BABAC214D3AEB00D691DA /* OrderDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewController.swift; sourceTree = "<group>"; };
+		3D1BABAD214D3AEB00D691DA /* OrderDetailsBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsBuilder.swift; sourceTree = "<group>"; };
+		3D1BABAE214D3AEB00D691DA /* OrderDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailsViewModel.swift; sourceTree = "<group>"; };
+		3D1BABB3214D3C0500D691DA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3D69A5CA214E0DCD00A6C830 /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		3DF7A1AD214C2AA200E5372A /* TrackOrders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrackOrders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF7A1B0214C2AA200E5372A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3DF7A1B2214C2AA200E5372A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3DF7A1B5214C2AA200E5372A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3DF7A1B7214C2AA400E5372A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DF7A1BA214C2AA400E5372A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +63,27 @@
 		3DF7A1C1214C2AA400E5372A /* TrackOrdersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrackOrdersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF7A1C5214C2AA400E5372A /* TrackOrdersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackOrdersTests.swift; sourceTree = "<group>"; };
 		3DF7A1C7214C2AA400E5372A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF7A1D1214C2C0B00E5372A /* UIImageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		3DF7A1D2214C2C0B00E5372A /* StoryboaedExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboaedExtension.swift; sourceTree = "<group>"; };
+		3DF7A1D3214C2C0B00E5372A /* Cell+Identfier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+Identfier.swift"; sourceTree = "<group>"; };
+		3DF7A1D5214C2C0C00E5372A /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		3DF7A1D6214C2C0C00E5372A /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		3DF7A1D8214C2C0C00E5372A /* Banner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		3DF7A1DA214C2C0D00E5372A /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		3DF7A1DB214C2C0D00E5372A /* ServerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManager.swift; sourceTree = "<group>"; };
+		3DF7A1DD214C2C0D00E5372A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		3DF7A1DE214C2C0D00E5372A /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		3DF7A1F5214C2CD400E5372A /* OrdersListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListRouter.swift; sourceTree = "<group>"; };
+		3DF7A1F6214C2CD400E5372A /* OrdersListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewController.swift; sourceTree = "<group>"; };
+		3DF7A1F7214C2CD400E5372A /* OrdersListBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListBuilder.swift; sourceTree = "<group>"; };
+		3DF7A1F8214C2CD400E5372A /* OrdersListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersListViewModel.swift; sourceTree = "<group>"; };
+		3DF7A1FD214C2E2A00E5372A /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		4AF7577905FF352D1DAF4592 /* Pods_TrackOrders.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrackOrders.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CAB5232B75D7AA23A99E345 /* Pods-TrackOrders.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackOrders.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackOrders/Pods-TrackOrders.debug.xcconfig"; sourceTree = "<group>"; };
+		5BC6BE71E54BD05DD4E3DF04 /* Pods-TrackOrdersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackOrdersTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackOrdersTests/Pods-TrackOrdersTests.release.xcconfig"; sourceTree = "<group>"; };
+		8AB1D19BB6DAC46761020E5A /* libPods-TrackOrdersTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TrackOrdersTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1867C65C9E5D9E1CE4A860E /* Pods-TrackOrdersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackOrdersTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TrackOrdersTests/Pods-TrackOrdersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C6E769750250E0FF69E29A /* Pods-TrackOrders.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrackOrders.release.xcconfig"; path = "Pods/Target Support Files/Pods-TrackOrders/Pods-TrackOrders.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +91,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D1BABB4214D3C0500D691DA /* MapKit.framework in Frameworks */,
+				A976BC6DC7BD67559C33DC60 /* Pods_TrackOrders.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +100,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B3639745C6905D2754C3305 /* libPods-TrackOrdersTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0D9A4B5B93215BC0F013A4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4CAB5232B75D7AA23A99E345 /* Pods-TrackOrders.debug.xcconfig */,
+				E6C6E769750250E0FF69E29A /* Pods-TrackOrders.release.xcconfig */,
+				A1867C65C9E5D9E1CE4A860E /* Pods-TrackOrdersTests.debug.xcconfig */,
+				5BC6BE71E54BD05DD4E3DF04 /* Pods-TrackOrdersTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3D1BABAA214D3A9200D691DA /* OrderDetails */ = {
+			isa = PBXGroup;
+			children = (
+				3D1BABAB214D3AEB00D691DA /* OrderDetailsRouter.swift */,
+				3D1BABAC214D3AEB00D691DA /* OrderDetailsViewController.swift */,
+				3D1BABAD214D3AEB00D691DA /* OrderDetailsBuilder.swift */,
+				3D1BABAE214D3AEB00D691DA /* OrderDetailsViewModel.swift */,
+			);
+			path = OrderDetails;
+			sourceTree = "<group>";
+		};
+		3D1BABB5214D3C2F00D691DA /* OrdersList */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7A1F5214C2CD400E5372A /* OrdersListRouter.swift */,
+				3DF7A1F6214C2CD400E5372A /* OrdersListViewController.swift */,
+				3DF7A1F7214C2CD400E5372A /* OrdersListBuilder.swift */,
+				3DF7A1F8214C2CD400E5372A /* OrdersListViewModel.swift */,
+				3DF7A1FD214C2E2A00E5372A /* OrderTableViewCell.swift */,
+			);
+			name = OrdersList;
+			sourceTree = "<group>";
+		};
 		3DF7A1A4214C2AA200E5372A = {
 			isa = PBXGroup;
 			children = (
 				3DF7A1AF214C2AA200E5372A /* TrackOrders */,
 				3DF7A1C4214C2AA400E5372A /* TrackOrdersTests */,
 				3DF7A1AE214C2AA200E5372A /* Products */,
+				0D0D9A4B5B93215BC0F013A4 /* Pods */,
+				B04AF848FB9E6FACA19BACC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,12 +164,18 @@
 		3DF7A1AF214C2AA200E5372A /* TrackOrders */ = {
 			isa = PBXGroup;
 			children = (
+				3DF7A1DC214C2C0D00E5372A /* Base */,
+				3DF7A1D0214C2C0B00E5372A /* Extension */,
+				3DF7A1D7214C2C0C00E5372A /* Helper */,
+				3DF7A1D4214C2C0C00E5372A /* Models */,
+				3DF7A1D9214C2C0D00E5372A /* NetworkManager */,
 				3DF7A1B0214C2AA200E5372A /* AppDelegate.swift */,
-				3DF7A1B2214C2AA200E5372A /* ViewController.swift */,
 				3DF7A1B4214C2AA200E5372A /* Main.storyboard */,
 				3DF7A1B7214C2AA400E5372A /* Assets.xcassets */,
 				3DF7A1B9214C2AA400E5372A /* LaunchScreen.storyboard */,
 				3DF7A1BC214C2AA400E5372A /* Info.plist */,
+				3D1BABAA214D3A9200D691DA /* OrderDetails */,
+				3D1BABB5214D3C2F00D691DA /* OrdersList */,
 			);
 			path = TrackOrders;
 			sourceTree = "<group>";
@@ -96,6 +189,62 @@
 			path = TrackOrdersTests;
 			sourceTree = "<group>";
 		};
+		3DF7A1D0214C2C0B00E5372A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7A1D1214C2C0B00E5372A /* UIImageViewExtension.swift */,
+				3DF7A1D2214C2C0B00E5372A /* StoryboaedExtension.swift */,
+				3DF7A1D3214C2C0B00E5372A /* Cell+Identfier.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		3DF7A1D4214C2C0C00E5372A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7A1D5214C2C0C00E5372A /* Location.swift */,
+				3DF7A1D6214C2C0C00E5372A /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3DF7A1D7214C2C0C00E5372A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7A1D8214C2C0C00E5372A /* Banner.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		3DF7A1D9214C2C0D00E5372A /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7A1DA214C2C0D00E5372A /* Constant.swift */,
+				3DF7A1DB214C2C0D00E5372A /* ServerManager.swift */,
+				3D69A5CA214E0DCD00A6C830 /* Rechability.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		3DF7A1DC214C2C0D00E5372A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3DF7A1DD214C2C0D00E5372A /* BaseViewController.swift */,
+				3DF7A1DE214C2C0D00E5372A /* BaseViewModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		B04AF848FB9E6FACA19BACC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D1BABB3214D3C0500D691DA /* MapKit.framework */,
+				4AF7577905FF352D1DAF4592 /* Pods_TrackOrders.framework */,
+				8AB1D19BB6DAC46761020E5A /* libPods-TrackOrdersTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -103,9 +252,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF7A1CA214C2AA400E5372A /* Build configuration list for PBXNativeTarget "TrackOrders" */;
 			buildPhases = (
+				D2ECDF3B50F715AA28480DE8 /* [CP] Check Pods Manifest.lock */,
 				3DF7A1A9214C2AA200E5372A /* Sources */,
 				3DF7A1AA214C2AA200E5372A /* Frameworks */,
 				3DF7A1AB214C2AA200E5372A /* Resources */,
+				EB4654D784B5A603A02A1A24 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -120,6 +271,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DF7A1CD214C2AA400E5372A /* Build configuration list for PBXNativeTarget "TrackOrdersTests" */;
 			buildPhases = (
+				070C47AC12E6776DAE481FB8 /* [CP] Check Pods Manifest.lock */,
 				3DF7A1BD214C2AA400E5372A /* Sources */,
 				3DF7A1BE214C2AA400E5372A /* Frameworks */,
 				3DF7A1BF214C2AA400E5372A /* Resources */,
@@ -146,6 +298,11 @@
 				TargetAttributes = {
 					3DF7A1AC214C2AA200E5372A = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3DF7A1C0214C2AA400E5372A = {
 						CreatedOnToolsVersion = 9.4;
@@ -192,13 +349,107 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		070C47AC12E6776DAE481FB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrackOrdersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2ECDF3B50F715AA28480DE8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrackOrders-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EB4654D784B5A603A02A1A24 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TrackOrders/Pods-TrackOrders-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ALCameraViewController/ALCameraViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SimpleImageViewer/SimpleImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ALCameraViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SimpleImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMessages.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TrackOrders/Pods-TrackOrders-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3DF7A1A9214C2AA200E5372A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF7A1B3214C2AA200E5372A /* ViewController.swift in Sources */,
+				3DF7A1ED214C2C0F00E5372A /* ServerManager.swift in Sources */,
+				3DF7A1EE214C2C0F00E5372A /* BaseViewController.swift in Sources */,
+				3D1BABB0214D3AEB00D691DA /* OrderDetailsViewController.swift in Sources */,
+				3DF7A1FE214C2E2A00E5372A /* OrderTableViewCell.swift in Sources */,
+				3D1BABB2214D3AEB00D691DA /* OrderDetailsViewModel.swift in Sources */,
+				3DF7A1E7214C2C0F00E5372A /* StoryboaedExtension.swift in Sources */,
+				3DF7A1EC214C2C0F00E5372A /* Constant.swift in Sources */,
+				3DF7A1EF214C2C0F00E5372A /* BaseViewModel.swift in Sources */,
 				3DF7A1B1214C2AA200E5372A /* AppDelegate.swift in Sources */,
+				3D1BABB1214D3AEB00D691DA /* OrderDetailsBuilder.swift in Sources */,
+				3DF7A1F9214C2CD400E5372A /* OrdersListRouter.swift in Sources */,
+				3D1BABAF214D3AEB00D691DA /* OrderDetailsRouter.swift in Sources */,
+				3DF7A1E6214C2C0F00E5372A /* UIImageViewExtension.swift in Sources */,
+				3DF7A1FA214C2CD400E5372A /* OrdersListViewController.swift in Sources */,
+				3DF7A1E9214C2C0F00E5372A /* Location.swift in Sources */,
+				3D69A5CB214E0DCD00A6C830 /* Rechability.swift in Sources */,
+				3DF7A1FC214C2CD400E5372A /* OrdersListViewModel.swift in Sources */,
+				3DF7A1FB214C2CD400E5372A /* OrdersListBuilder.swift in Sources */,
+				3DF7A1EB214C2C0F00E5372A /* Banner.swift in Sources */,
+				3DF7A1E8214C2C0F00E5372A /* Cell+Identfier.swift in Sources */,
+				3DF7A1EA214C2C0F00E5372A /* Order.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +607,7 @@
 		};
 		3DF7A1CB214C2AA400E5372A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAB5232B75D7AA23A99E345 /* Pods-TrackOrders.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -374,6 +626,7 @@
 		};
 		3DF7A1CC214C2AA400E5372A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6C6E769750250E0FF69E29A /* Pods-TrackOrders.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +645,7 @@
 		};
 		3DF7A1CE214C2AA400E5372A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1867C65C9E5D9E1CE4A860E /* Pods-TrackOrdersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -413,6 +667,7 @@
 		};
 		3DF7A1CF214C2AA400E5372A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BC6BE71E54BD05DD4E3DF04 /* Pods-TrackOrdersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

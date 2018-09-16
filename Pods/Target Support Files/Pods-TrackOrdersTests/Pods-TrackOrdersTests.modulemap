@@ -1,0 +1,6 @@
+module Pods_TrackOrdersTests {
+  umbrella header "Pods-TrackOrdersTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
