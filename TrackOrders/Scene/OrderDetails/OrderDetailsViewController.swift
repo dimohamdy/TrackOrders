@@ -45,21 +45,17 @@ class OrderDetailsViewController: BaseViewController {
 private extension OrderDetailsViewController {
     
     func setupViews() {
+        
         self.title = viewModel.order.location?.address
         mapView = MKMapView()
         mapView.mapType = MKMapType.standard
         mapView.isZoomEnabled = true
         mapView.isScrollEnabled = true
         view.addSubview(mapView)
-
-        mapView.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(self.view).offset(0)
-            make.left.equalTo(self.view).offset(0)
-            make.right.equalTo(self.view).offset(0)
-            make.height.equalToSuperview().multipliedBy(0.7)
-
-        }
         view.backgroundColor = .white
+        
+        
+        
         
         orderImage = UIImageView(image: #imageLiteral(resourceName: "lalamove"))
         if let path = viewModel.order.imageUrl {
@@ -69,23 +65,14 @@ private extension OrderDetailsViewController {
         let tapGestureRecognizerToShowOrderImage = UITapGestureRecognizer(target: self, action: #selector(showImageView(tapGestureRecognizer:)))
         orderImage.isUserInteractionEnabled = true
         orderImage.addGestureRecognizer(tapGestureRecognizerToShowOrderImage)
-        
-        orderImage.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(mapView.snp.bottom).offset(20)
-            make.left.equalTo(view).offset(20)
-            make.height.equalTo(orderImage.snp.width)
-            make.height.equalTo(100)
 
-        }
+        
+        
         
         descriptionLabel = UILabel()
         descriptionLabel.text = viewModel.order.descriptionField
         view.addSubview(descriptionLabel)
-        descriptionLabel.snp.makeConstraints { (make) -> Void in
-            make.top.equalTo(mapView.snp.bottom).offset(20)
-            make.right.equalTo(view).offset(20)
-            make.left.equalTo(orderImage.snp.right).offset(20)
-        }
+
         
         guard let lat = viewModel.order.location?.lat ,let lng = viewModel.order.location?.lng else {
             return
@@ -110,6 +97,27 @@ private extension OrderDetailsViewController {
     
     func setupLayout() {
         
+        mapView.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(self.view).offset(0)
+            make.left.equalTo(self.view).offset(0)
+            make.right.equalTo(self.view).offset(0)
+            make.height.equalToSuperview().multipliedBy(0.7)
+            
+        }
+        
+        descriptionLabel.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(mapView.snp.bottom).offset(20)
+            make.right.equalTo(view).offset(20)
+            make.left.equalTo(orderImage.snp.right).offset(20)
+        }
+        
+        orderImage.snp.makeConstraints { (make) -> Void in
+            make.top.equalTo(mapView.snp.bottom).offset(20)
+            make.left.equalTo(view).offset(20)
+            make.height.equalTo(orderImage.snp.width)
+            make.height.equalTo(100)
+            
+        }
     }
     
     func setupRx() {

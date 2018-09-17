@@ -38,7 +38,6 @@ class OrdersListViewModel : BaseViewModel {
         }
     }
     func getOrders(){
-        self.loading.accept(true)
         
         var datasource:DataSource? = nil
         //check internet connection
@@ -49,12 +48,13 @@ class OrdersListViewModel : BaseViewModel {
             
         }
         
+        self.loading.accept(true)
         datasource?.getOrders(offset: page,limit: limitOfItem) { ordersArray in
-            // print(photos?.count)
+            self.loading.accept(false)
+            // print(ordersArray?.count)
             guard let orders = ordersArray else{
                 return
             }
-            self.loading.accept(false)
             var tempOrderArray = self.ordersRX.value
             tempOrderArray.append(contentsOf: orders)
             self.ordersRX.accept(tempOrderArray)

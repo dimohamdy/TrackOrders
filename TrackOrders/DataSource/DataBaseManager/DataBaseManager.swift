@@ -16,8 +16,8 @@ class DataBaseManager: DataSource {
         
         let realm = try! Realm()
         let orders = Array(realm.objects(Order.self))
-        print("===== \(orders.count)")
         guard orders.count > 0  else {
+            completion([])
             return
         }
         let beginIndex:Int = offset * limit
@@ -33,7 +33,6 @@ class DataBaseManager: DataSource {
         if isEndIndexValid == true {
             endIndex = beginIndex + limit
         }
-//        realm.objects(Order.self)[(beginIndex ..< endIndex)]
 
         let arrayOfOrders:[Order] =  Array(orders[(beginIndex ..< endIndex)])
         

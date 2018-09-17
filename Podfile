@@ -22,6 +22,7 @@ target 'TrackOrders' do
   pod 'AlamofireNetworkActivityIndicator'
   pod 'SnapKit', '~> 4.0.0'
   realm_pods
+  pod 'HGPlaceholders'
 end
 
 target 'TrackOrdersTests' do

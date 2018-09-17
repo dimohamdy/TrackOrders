@@ -11,26 +11,30 @@ import RxSwift
 import RxCocoa
 import SnapKit
 import SimpleImageViewer
+import HGPlaceholders
 
 class OrdersListViewController: BaseViewController {
     fileprivate let viewModel: OrdersListViewModel
     fileprivate let router: OrdersListRouter
     fileprivate let disposeBag = DisposeBag()
-    private var tableView: UITableView!
-
+    private var tableView: TableView!
+    
+    var placeholderTableView: TableView?
+    
+    
     init(withViewModel viewModel: OrdersListViewModel, router: OrdersListRouter) {
         self.viewModel = viewModel
         self.router = router
         super.init(nibName: nil, bundle: nil)
     }
-
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViews()
         setupLayout()
         setupRx()
@@ -39,24 +43,46 @@ class OrdersListViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         view.insertSubview(activity, aboveSubview: tableView)
-
+        
     }
 }
 
 // MARK: Setup
 private extension OrdersListViewController {
-
+    
     func setupViews() {
-        
         title = "Things to Deliver"
-        viewModel.getOrders()
-        tableView = UITableView()
+        
+        tableView = TableView()
+
+        self.tableView.backgroundColor = .white
         tableView.estimatedRowHeight = 120.0;
         tableView.rowHeight = UITableViewAutomaticDimension;
         
         tableView.frame = self.view.frame
         tableView.register(OrderTableViewCell.self, forCellReuseIdentifier: OrderTableViewCell.id)
         self.view.addSubview(tableView)
+        tableView.addSubview(activity)
+                
+    }
+    
+    func activePlaceholderTableView(active:Bool) {
+        
+        if active {
+            self.placeholderTableView = self.tableView
+            self.placeholderTableView?.placeholdersProvider = .basic
+            self.placeholderTableView?.placeholderDelegate = self
+            self.placeholderTableView?.showNoResultsPlaceholder()
+            
+        } else {
+            self.placeholderTableView?.placeholderDelegate = nil
+            self.placeholderTableView?.dataSource = nil
+            self.placeholderTableView?.delegate = nil
+        }
+    }
+    
+    func setupLayout() {
+        
         tableView.snp.makeConstraints { (make) -> Void in
             make.top.equalTo(self.view).offset(0)
             make.left.equalTo(self.view).offset(0)
@@ -64,22 +90,33 @@ private extension OrdersListViewController {
             make.right.equalTo(self.view).offset(0)
         }
         
+    }
+    
+    func setupRx() {
         
-        tableView.addSubview(activity)
+        let noReaultObservable:Observable<Bool> =  viewModel.ordersRX.asObservable().map({ (orders) -> Bool in
+            return orders.count <= 0
+        }).asObservable().share()
         
-        tableView.delegate = nil
         
-        tableView.rx.setDelegate(self).disposed(by: disposeBag)
-        
-        viewModel.ordersRX.asObservable().map({ (photos) -> Bool in
-            return photos.count <= 0
-        }).asObservable().bind(to: tableView.rx.isHidden).disposed(by: disposeBag)
-        
-        viewModel.ordersRX.asObservable().bind(to: tableView!.rx.items(cellIdentifier: OrderTableViewCell.id, cellType: OrderTableViewCell.self)) { row, cellData, cell in
+        noReaultObservable.subscribe(onNext: { [unowned self] noResult in
             
-            cell.configureCellWith(order: cellData, delegate: self)
-            
-            }.disposed(by: disposeBag)
+            if noResult == true {
+                self.activePlaceholderTableView(active: true)
+            } else {
+                
+                self.activePlaceholderTableView(active: false)
+                
+                self.tableView.rx.setDelegate(self).disposed(by: self.disposeBag)
+                
+                self.viewModel.ordersRX.asObservable().bind(to: self.tableView!.rx.items(cellIdentifier: OrderTableViewCell.id, cellType: OrderTableViewCell.self)) { row, cellData, cell in
+                    
+                    cell.configureCellWith(order: cellData, delegate: self)
+                    
+                    }.disposed(by: self.disposeBag)
+                
+            }
+        }).disposed(by: disposeBag)
         
         
         viewModel.loading.asObservable().share().bind(to: activity.rx_animating).disposed(by: disposeBag)
@@ -89,17 +126,8 @@ private extension OrdersListViewController {
             //show order
             self.router.navigateToOrderDetails(order: order)
         }).disposed(by: self.disposeBag)
-   
-
-    }
-
-    
-    func setupLayout() {
-    
-    }
-
-    func setupRx() {
-    
+        
+        viewModel.getOrders()
     }
 }
 // MARK: - UITableViewDelegate
@@ -116,7 +144,17 @@ extension OrdersListViewController: UITableViewDelegate {
 extension OrdersListViewController : OrdereCellAction {
     
     func showOrderImage(imageView: UIImageView) {
-
+        
         self.showImage(imageView: imageView)
     }
 }
+
+extension OrdersListViewController: PlaceholderDelegate {
+    
+    func view(_ view: Any, actionButtonTappedFor placeholder: Placeholder) {
+        print(placeholder.key.value)
+        viewModel.getOrders()
+    }
+    
+}
+

@@ -5,6 +5,7 @@ PODS:
   - AlamofireNetworkActivityIndicator (2.2.1):
     - Alamofire (~> 4.7)
   - ALCameraViewController (3.0.3)
+  - HGPlaceholders (0.3.0)
   - Nimble (7.2.0)
   - NVActivityIndicatorView (4.3.0):
     - NVActivityIndicatorView/Presenter (= 4.3.0)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - AlamofireImage
   - AlamofireNetworkActivityIndicator
   - ALCameraViewController
+  - HGPlaceholders
   - Nimble
   - NVActivityIndicatorView
   - Quick
@@ -44,6 +46,7 @@ SPEC REPOS:
     - AlamofireImage
     - AlamofireNetworkActivityIndicator
     - ALCameraViewController
+    - HGPlaceholders
     - Nimble
     - NVActivityIndicatorView
     - Quick
@@ -60,6 +63,7 @@ SPEC CHECKSUMS:
   AlamofireImage: 3b35b586853abaf94ca1250f4e94cff3c21a4c0d
   AlamofireNetworkActivityIndicator: aeac50e6ecb78ec71a5f1f29098bcf4ec2962910
   ALCameraViewController: 6398a9282057f709b87a1ecc52a83b48028ade64
+  HGPlaceholders: 2df01c51b04a30acd0b8c9c7161c7cdde4541109
   Nimble: fa2913b0e14dafef970357f67d152ab4f7c4f457
   NVActivityIndicatorView: 963f62bf9f993fcf23218e55958e5b1761b9504c
   Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
@@ -71,6 +75,6 @@ SPEC CHECKSUMS:
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftMessages: 32ce3cfc8388b41aae56ff4853cc752a20101147
 
-PODFILE CHECKSUM: ab38ec4fe5bb3bf413280d38fb2abd4d3d908ba7
+PODFILE CHECKSUM: d9ff5a08b33d1633532a0bacd8745a9f3cc4a542
 
 COCOAPODS: 1.5.2
