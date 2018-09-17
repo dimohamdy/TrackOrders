@@ -16,6 +16,9 @@ class Reachability {
     
     static func startNetworkReachabilityObserver() {
         
+        if isConnected == false {
+            Banner.shared.showAlert("⚠ The network is not reachable")
+        }
         reachabilityManager?.listener = { status in
             switch status {
             case .notReachable:
